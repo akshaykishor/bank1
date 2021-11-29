@@ -1,0 +1,71 @@
+   <div class="h2"><h1>welcome {{user}}</h1></div> 
+    <div class="main">
+        <form  [formGroup]="depositForm" (ngSubmit)="deposit()">
+        
+        <h1>DEPOSIT</h1><br><br><br>
+        
+        
+        <div>
+        <label for="account_no">Account Number:</label>
+        <input type="text" id="account_no" name="acno"formControlName="acno" ><br><br><br>
+
+        <div class="errors" *ngIf="(this.depositForm.get('acno')?.touched||this.depositForm.get('acno')?.dirty)&&this.depositForm.get('acno')?.errors" id="errors">invalid account number</div>
+
+        <label for="password">Password:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="password" name="password"formControlName ="password" ><br><br><br> 
+
+        <div class="errors" *ngIf="(this.depositForm.get('password')?.touched||this.depositForm.get('password')?.dirty)&&this.depositForm.get('password')?.errors" id="errors">invalid password</div>
+
+        <label for="amt">Amount:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+        <input type="amount" id="amt"name="amnt" formControlName="amnt" >
+
+        <div class="errors" *ngIf="(this.depositForm.get('amnt')?.touched||this.depositForm.get('amnt')?.dirty)&&this.depositForm.get('amnt')?.errors" id="errors">invalid type</div>
+
+         <button type="button" (click)="deposit()">deposit</button><br><br>
+        
+    </div>
+
+</form>
+
+        
+        
+    
+    </div>
+
+    <div class="main">
+        <form  [formGroup]="withdrawForm"(ngSubmit)="withdraw()">
+
+        
+        <h1>WITHDRAW</h1><br><br><br>
+        
+        
+        <div>
+        <label for="account_no">Account Number:</label>
+        <input type="text" id="account_no" name= "acno1"formControlName="acno1" ><br><br><br>
+
+        <div class="errors" *ngIf="(this.withdrawForm.get('acno1')?.touched||this.withdrawForm.get('acno1')?.dirty)&&this.withdrawForm.get('acno1')?.errors" id="errors">invalid account number</div>
+
+        <label for="password">Password:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="password" name="password1"formControlName="password1" ><br><br><br> 
+
+        <div class="errors" *ngIf="(this.withdrawForm.get('password1')?.touched||this.withdrawForm.get('password1')?.dirty)&&this.withdrawForm.get('password1')?.errors" id="errors">invalid password</div>
+
+        <label for="amt">Amount:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+        <input type="amount" id="amt" name="amnt1" formControlName="amnt1" ><br>
+
+        <div class="errors" *ngIf="(this.withdrawForm.get('amnt1')?.touched||this.withdrawForm.get('amnt1')?.dirty)&&this.withdrawForm.get('amnt1')?.errors" id="errors">invalid type</div>
+
+         <button type="button" (click)="withdraw()">withdraw</button><br><br>
+         
+    </div>
+</form>
+
+        
+        
+    
+    </div>
+    
+
+

@@ -1,0 +1,33 @@
+<div class="n">
+<p><b>{{aim}}</b></p> <br><br></div>
+<!-- <div class="img">
+    <img src=""
+    
+</div> -->
+
+<div class="main">
+    <form [formGroup]="loginForm" (ngsubmit)="login()">
+   
+        
+    <h1>Bank application</h1><br><br><br>
+    
+    
+    <div class="z">
+    <label for="account_no">Account Number:</label>
+    <input type="text" id="account_no" formControlName="acno" name="acno"><br><br><br>
+
+    <div class="errors" *ngIf="(this.loginForm.get('acno')?.touched||this.loginForm.get('acno')?.dirty)&&this.loginForm.get('acno')?.errors" id="errors">invalid account number</div>
+
+    <label for="password">Password:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="password"  formControlName="pswd"  name="pswd"><br><br><br>
+    
+    <div class="errors" *ngIf="(this.loginForm.get('pswd')?.touched||this.loginForm.get('pswd')?.dirty)&&this.loginForm.get('pswd')?.errors" id="errors">invalid password</div>
+
+     <button type="button" (click)="login()">login</button><br><br>
+     <h3><a routerLink='register'>register</a></h3>
+</div>
+</form>
+    
+    
+
+</div>

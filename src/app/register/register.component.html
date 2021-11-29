@@ -1,0 +1,29 @@
+<div class="main">
+    <form [formGroup]="registerForm" (ngsubmit)="register()">
+        
+    <h1>Bank application</h1><br><br><br>
+    <div>
+    <label for="uname">User name:</label>
+    <input type="text" id="uname" formControlName="uname" name="uname"><br><br><br>
+
+ <div class="errors" *ngIf="(this.registerForm.get('uname')?.touched||this.registerForm.get('uname')?.dirty)&&this.registerForm.get('uname')?.errors" id="errorss">invalid username</div>
+
+    <label for="account_no">Account Number:</label>
+    <input type="text" id="account_no" formControlName="acno" [value]="acno" name="acno"><br><br><br>
+
+<div class="errors" *ngIf="(this.registerForm.get('acno')?.touched||this.registerForm.get('acno')?.dirty)&&this.registerForm.get('acno')?.errors" id="errorss">invalid account number</div>
+
+    <label for="password">Password:</label>
+    <input type="text" id="pswd" formControlName="pswd" name="pswd"><br><br><br>
+    
+<div class="errors" *ngIf="(this.registerForm.get('pswd')?.touched||this.registerForm.get('pswd')?.dirty)&&this.registerForm.get('pswd')?.errors" id="errorss">invalid password</div>
+
+    
+    <button type="button" (click)="register()">register</button><br><br>
+    <p>please<a routerLink=''>login</a>if you already registered.... </p>
+</div>
+</form>
+    
+    
+
+</div>
