@@ -1,4 +1,6 @@
-   <div class="h2"><h1>welcome {{user}}</h1></div> 
+   <div class="h2"><h1>welcome {{user}}</h1>
+    <h3><a routerLink="/transaction">view transaction history</a>
+   </h3></div> 
     <div class="main">
         <form  [formGroup]="depositForm" (ngSubmit)="deposit()">
         
@@ -23,6 +25,7 @@
         <div class="errors" *ngIf="(this.depositForm.get('amnt')?.touched||this.depositForm.get('amnt')?.dirty)&&this.depositForm.get('amnt')?.errors" id="errors">invalid type</div>
 
          <button type="button" (click)="deposit()">deposit</button><br><br>
+       
         
     </div>
 

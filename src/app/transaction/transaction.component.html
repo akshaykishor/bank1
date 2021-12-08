@@ -1,0 +1,17 @@
+<h1>Transaction works!</h1>
+<table border="10px">
+    <tr>
+        <th>amount</th>
+        <th>type</th>
+    </tr>
+
+    <tbody>
+        <tr *ngFor="let t of transactions">
+            <td> {{t.amount}}</td>
+            <td> {{t.type}}</td>
+            
+        </tr>
+    </tbody>
+
+
+</table>

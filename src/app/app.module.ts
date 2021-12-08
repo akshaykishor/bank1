@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboComponent } from './dashbo/dashbo.component';
 import { RegisterComponent } from './register/register.component';
+import { TransactionComponent } from './transaction/transaction.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboComponent,
-    RegisterComponent
+    RegisterComponent,
+    TransactionComponent
     
   ],
   imports: [
